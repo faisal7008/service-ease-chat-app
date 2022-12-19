@@ -1,4 +1,6 @@
-const io = require("socket.io")(9010, {
+const dotenv = require('dotenv')
+
+const io = require("socket.io")(process.env.PORT || 9010, {
   cors: {
     origin: "https://service-at-ease.netlify.app",
   },
